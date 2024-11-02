@@ -3,6 +3,10 @@ import { SearchResult } from './types';
 import { RETRY_OPTIONS } from './config';
 import { withRetry } from './utils';
 
+// Debugging: Log the API key to ensure it is being loaded correctly
+console.log("Environment Variable - VITE_OPENAI_API_KEY:", import.meta.env.VITE_OPENAI_API_KEY);
+
+
 const openai = new OpenAI({
   apiKey: import.meta.env.VITE_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
